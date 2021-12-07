@@ -1,9 +1,6 @@
 
 
 class Review implements Matchable{
-
-    private User ownAs;
-    private int userId;
     
     private int rating;
     private String comments;

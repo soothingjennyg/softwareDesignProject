@@ -14,4 +14,10 @@ class MonthlyReport implements Report{
 
     }
 
+    public MonthlyReport createReport(){
+
+	return null;
+	
+    }
+
 }

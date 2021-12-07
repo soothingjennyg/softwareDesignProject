@@ -1,9 +1,6 @@
 import java.util.Date;
 
 class EmployeeAvailability implements Matchable{
-
-    private User ownAs;
-    private int userId;
     
     private int shiftId;
     private int employeeId;

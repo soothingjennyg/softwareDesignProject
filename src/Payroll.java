@@ -1,6 +1,6 @@
 
 
-class Payroll implements Finance{
+class Payroll{
 
     private FinanceMediator mediator;
     private Boolean approved;

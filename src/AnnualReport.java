@@ -13,4 +13,10 @@ class AnnualReport implements Report{
 
     }
 
+    public AnnualReport createReport(){
+
+	return null;
+	
+    }
+
 }

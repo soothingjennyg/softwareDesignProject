@@ -7,6 +7,11 @@ class Scheduler{
     private Matcher matcher;
 
 
+    private Scheduler(){
+
+    }
+
+
     static Scheduler getInstance(){
 
 	return null;

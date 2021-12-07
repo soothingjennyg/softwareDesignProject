@@ -3,6 +3,7 @@
 
 class Employer{
 
+    private int id;
     private User user;
     private BuildShiftDirector builderShiftDirector;
 

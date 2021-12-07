@@ -3,7 +3,7 @@
 class Company{
 
     private String companyName;
-    private Employer employers;
+    private Employer[] employers;
 
 
 
