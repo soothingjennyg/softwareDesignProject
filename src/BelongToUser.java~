@@ -1,0 +1,10 @@
+
+
+interface BelongToUser{
+
+    //private int userId;
+    //private Date date;
+
+    public User getOwner();
+
+}
