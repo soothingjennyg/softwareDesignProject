@@ -1,7 +1,7 @@
 
 
 
-class FeedbackBiasStrategy{
+class FeedbackBiasStrategy implements MatchStrategy{
     
     private Json config;
 

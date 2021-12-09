@@ -1,6 +1,6 @@
 
 
-class SkillBiasStrategy{
+class SkillBiasStrategy implements MatchStrategy{
     
     private Json config;
 
