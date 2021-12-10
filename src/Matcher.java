@@ -10,15 +10,16 @@ class Matcher{
 
     }
 
-    public Matcher setStrategy(MatchStrategy strategy){
+    public Boolean setStrategy(MatchStrategy strategy){
 
-	return null;
+	this.strategy = strategy;
+	return true;
 	
     }
 
     public MatchedShift match(){
 
-	return null;
+        return null;
 
     }
 

@@ -1,6 +1,6 @@
 
 
-class Review implements Matchable{
+class Review{
     
     private int rating;
     private String comments;
@@ -8,11 +8,19 @@ class Review implements Matchable{
 
     public Review(int rating, String comment){
 
+	this.rating = rating;
+	this.comments = comment;
     }
 
-    public User getOwner(){
+    public String getComments(){
 
 	return null;
+	
+    }
+
+    public int getRating(){
+
+	return -1;
 	
     }
 

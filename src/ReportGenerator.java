@@ -2,6 +2,9 @@
 
 abstract class ReportGenerator{
 
-    public abstract Report generateReport();
+    public Boolean isGenerating;
 
+    public abstract Report generateReport();
+    public abstract Boolean checkIfExists();
+    public abstract Boolean queueReport();
 }

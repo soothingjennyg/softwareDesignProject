@@ -11,4 +11,25 @@ class FeedbackBiasStrategy implements MatchStrategy{
 	
     }
 
+    public MatchedShift matchAddress(){
+
+	return null;
+    }
+
+    public MatchedShift matchTime(){
+
+	
+
+	return null;
+	
+    }
+
+    public MatchedShift matchFeedback(){
+
+	
+
+	return null;
+	
+    }
+
 }

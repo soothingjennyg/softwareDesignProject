@@ -6,15 +6,21 @@ class User{
     private String name;
     private int addressId;
     private String email;
+    private String pwd;
     private String phoneNumber;
 
     private Permission[] permissions;
     private ActivityLog[] activityLogs;
     private Configuration[] configurations;
     private LoggedInDevice[] loggedInDevices;
-    private Address[] addresses;
 
     public String login(String email, String pwd){
+
+	if(this.email.equals(email) && this.pwd.equals(pwd)){
+
+	    
+
+	}
 
 	return null;
     }
