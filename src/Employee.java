@@ -1,5 +1,5 @@
 import java.util.Date;
-
+import java.util.ArrayList;
 
 class Employee extends Matchable{
 
@@ -10,7 +10,8 @@ class Employee extends Matchable{
     private Address address;
     private Payrate payrate;
     private Skill[] skills;
-    private TimeSlot[] timeSlots;
+    private ArrayList<TimeSlot> timeSlots;
+    private Review[] reviews;
 
 
 
@@ -26,12 +27,12 @@ class Employee extends Matchable{
     }
     public Skill[] getSkills(){
 
-	return null;
+	return this.skills;
 
     }
     public Review[] getReviews(){
 
-	return null;
+	return this.reviews;
 
     }
     
@@ -45,14 +46,19 @@ class Employee extends Matchable{
 	return null;
 
     }
-    public TimeSlot addTimeSlot(Date from, Date to){
+    public Boolean addTimeSlot(Date start, Date end){
 
-	return null;
+	TimeSlot timeSlot = new TimeSlot(start, end);
+
+	this.timeSlots.add(timeSlot);
+	
+	
+	return true;
 
     }
-    public TimeSlot[] getTimeSlot(){
+    public ArrayList<TimeSlot> getTimeSlots(){
 
-	return null;
+	return this.timeSlots;
 
     }
     public Address addAddress(){

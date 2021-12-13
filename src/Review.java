@@ -3,24 +3,25 @@
 class Review{
     
     private int rating;
-    private String comments;
+    private String comment;
     private int reviewerId;
 
-    public Review(int rating, String comment){
+    public Review(int reviewerId, int rating, String comment){
 
+	this.reviewerId = reviewerId;
 	this.rating = rating;
-	this.comments = comment;
+	this.comment = comment;
     }
 
     public String getComments(){
 
-	return null;
+	return this.comment;
 	
     }
 
     public int getRating(){
 
-	return -1;
+	return this.rating;
 	
     }
 

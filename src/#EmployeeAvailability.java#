@@ -1,0 +1,28 @@
+import java.util.Date;
+
+class EmployeeAvailability implements Matchable{
+    
+    private Date from;
+    private Date to;
+    private Date appliedDate;
+
+    public EmployeeAvailability(Date from, Date to){
+
+	this.from = from;
+	this.to = to;
+    }
+
+    public Boolean saveRecord(){
+
+	
+	return false;
+	
+    }
+
+    public User getOwner(){
+
+	return null;
+	
+    }
+
+}

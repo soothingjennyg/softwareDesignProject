@@ -12,13 +12,13 @@ class Skill{
 
     public String getSkillName(){
 
-	return null;
+	return this.name;
 	
     }
 
     public int getSkillLevel(){
 
-	return -1;
+	return this.level;
 	
     }
 

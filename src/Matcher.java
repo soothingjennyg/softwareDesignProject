@@ -17,9 +17,9 @@ class Matcher{
 	
     }
 
-    public MatchedShift match(){
+    public MatchedShift match(Employee employee, Shift shift){
 
-        return null;
+        return strategy.match(employee, shift);
 
     }
 

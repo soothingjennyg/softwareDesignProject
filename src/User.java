@@ -1,4 +1,4 @@
-
+import java.security.SecureRandom;
 
 class User{
 
@@ -14,11 +14,16 @@ class User{
     private Configuration[] configurations;
     private LoggedInDevice[] loggedInDevices;
 
+
     public String login(String email, String pwd){
 
 	if(this.email.equals(email) && this.pwd.equals(pwd)){
 
-	    
+	    SecureRandom random = new SecureRandom();
+	    byte bytes[] = new byte[20];
+	    random.nextBytes(bytes);
+	    return bytes.toString();
+
 
 	}
 

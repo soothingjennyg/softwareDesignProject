@@ -9,15 +9,18 @@ class ShiftBuilder implements BuildShift{
 	return null;
 	
     }
-    public Shift constructShift(){
+    public Boolean constructShift(){
 
-	return null;
+	this.result = new Shift();
+
+	return true;
 	
     }
 
-    public Boolean populateTimeSlot(Date from, Date to){
+    public Boolean populateTimeSlot(Date start, Date end){
 
-	return null;
+	this.result.addTimeSlot(start, end);
+	return true;
 	
     }
 
@@ -53,7 +56,7 @@ class ShiftBuilder implements BuildShift{
 
     public Shift getResult(){
 
-	return null;
+	return this.result;
     }
 
 }

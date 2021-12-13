@@ -9,9 +9,19 @@ class Employer{
 
 
 
-    public Report makeReport(String type){
+    public Report makeReport(ReportGenerator type, String title, Json data, String category, int year, int month){
 
-	return null;
+	if(type instanceof AnnualReportGenerator){
+
+	    return type.generateReport(title, data, category, year, month);
+	    
+	}
+	else{
+
+	    return type.generateReport(title, data, category, year, month);
+
+	}
+	
     }
 
 }

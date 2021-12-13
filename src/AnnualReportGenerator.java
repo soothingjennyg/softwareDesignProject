@@ -6,23 +6,37 @@ class AnnualReportGenerator extends ReportGenerator{
     private String title;
     private Json data;
     private String category;
+    private AnnualReport report;
     public Boolean isGenerating;
 
-    public AnnualReport generateReport(){
+    public AnnualReport generateReport(String title, Json data, String category, int year, int month){
 
-	return null;
+	Boolean exists = this.checkIfExists();
+
+	if(!exists){
+
+	    this.queueReport();
+
+	    this.report = new AnnualReport(title, data, category, year);
+	    this.isGenerating = false;
+	}
+	
+	return this.report;
 
     }
 
     public Boolean checkIfExists(){
 
-        return null;
+        return this.report != null;
 
     }
 
     public Boolean queueReport(){
 
-	return null;
+	while(this.isGenerating);
+	this.isGenerating = true;
+
+	return true;
 	
     }
 

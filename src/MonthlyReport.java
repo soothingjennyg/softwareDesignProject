@@ -9,8 +9,12 @@ class MonthlyReport implements Report{
     private int year;
 
 
-    public MonthlyReport(String title, Json data, String category, int month, int year){
+    public MonthlyReport(String title, Json data, String category, int year, int month){
 
+	this.title = title;
+	this.data = data;
+	this.category = category;
+	this.year = year;
 
     }
 

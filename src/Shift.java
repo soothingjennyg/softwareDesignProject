@@ -1,17 +1,23 @@
 import java.io.File;  
 import java.util.Date;
+import java.util.ArrayList;
 
-class Shift{
+class Shift extends Matchable{
 
     private String title;
     private Comment[] comments;
     private Break[] breaks;
     private Attachment[] attachments;
-    private MatchedShift matchedShift;
+    private MatchedShift[] matchedShifts;
 
-    public Shift(String title, int count){
+    private Address address;
+    private Payrate payrate;
+    private Skill[] skills;
+    private ArrayList<TimeSlot> timeSlots;
+    private Review[] reviews;
 
-	this.title = title;
+    public Shift(){
+
     }
 
     public Skill addSkill(String name, int level){
@@ -21,12 +27,12 @@ class Shift{
     }
     public Skill[] getSkills(){
 
-	return null;
+	return this.skills;
 
     }
     public Review[] getReviews(){
 
-	return null;
+	return this.reviews;
 
     }
     
@@ -40,14 +46,19 @@ class Shift{
 	return null;
 
     }
-    public TimeSlot addTimeSlot(Date from, Date to){
+    public Boolean addTimeSlot(Date start, Date end){
 
-	return null;
+	TimeSlot timeSlot = new TimeSlot(start, end);
+
+	this.timeSlots.add(timeSlot);
+	
+	
+	return true;
 
     }
-    public TimeSlot[] getTimeSlot(){
+    public ArrayList<TimeSlot> getTimeSlots(){
 
-	return null;
+	return this.timeSlots;
 
     }
     public Address addAddress(){
@@ -95,6 +106,12 @@ class Shift{
 
 	return null;
 	
+    }
+
+    public MatchedShift[] getMatchedShifts(){
+
+	return this.matchedShifts;
+
     }
 
 }

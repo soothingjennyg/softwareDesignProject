@@ -7,18 +7,31 @@ class MatchedShift{
     private int rank;
     private Boolean isApproved;
     private Boolean isCompleted;
-    private Shift shiftPosition;
+    private Employee employee;
+    private Shift shift;
 
 
 
-    public MatchedShift(Shift info){
+    public MatchedShift(Employee employee, Shift shift){
 
+	this.employee = employee;
+	this.shift = shift;
         
     }
 
     public Boolean appoveShift(){
 
-	return null;
+	this.isApproved = true;
+
+	return true;
+	
+    }
+
+    public Boolean rejectShift(){
+
+	this.isApproved = false;
+
+	return true;
 	
     }
 
@@ -66,7 +79,7 @@ class MatchedShift{
 
     public Review createReview(int reviewerId, int rating, String comment){
 
-        return null;
+        return new Review(reviewerId, rating, comment);
 	
     }
 

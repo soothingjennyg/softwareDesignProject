@@ -2,5 +2,5 @@
 
 interface MatchStrategy{
 
-    public MatchedShift match();
+    public MatchedShift match(Employee employee, Shift shift);
 }

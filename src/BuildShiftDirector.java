@@ -1,4 +1,4 @@
-
+import java.util.Date;
 
 class BuildShiftDirector{
 
@@ -14,9 +14,15 @@ class BuildShiftDirector{
 	
     }
 
-    public Boolean makeShift(BuildShift builder){
+    public Shift makeShift(BuildShift builder, Date start, Date end){
 
-	return null;
+	this.builder = builder;
+
+	this.builder.constructShift();
+
+	this.builder.populateTimeSlot(start, end);
+	
+	return this.builder.getResult();
 	
     }
 
