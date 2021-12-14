@@ -26,8 +26,16 @@ class Scheduler{
 
     public Boolean executeSchedule(Schedule schedule){
 
-	
-	return null;
+	if(schedule.getJob().equals("match")){
+
+	    this.matcher.setStrategy(schedule.getStrategy());
+
+	    this.matcher.match(schedule.getEmployee(), schedule.getShift());
+
+	    return true;
+
+	}
+	return false;
 	
     }
 
