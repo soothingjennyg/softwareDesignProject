@@ -1,6 +1,6 @@
 import java.util.Date;
 
-class ActivityLog implements BelongToUser{
+public class ActivityLog implements BelongToUser{
 
     private String action;
     private Date date;

@@ -1,18 +1,24 @@
 
 
-class Skill implements Matchable{
+public class Skill{
 
     private String name;
-    private int levet;
+    private int level;
 
     public Skill(String name, int level){
 
 
     }
 
-    public User getOwner(){
+    public String getSkillName(){
 
-	return null;
+	return this.name;
+	
+    }
+
+    public int getSkillLevel(){
+
+	return this.level;
 	
     }
 

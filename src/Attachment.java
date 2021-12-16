@@ -1,6 +1,6 @@
 import java.io.File;  
 
-class Attachment{
+public class Attachment{
 
     private String fileType;
     private String filePath;

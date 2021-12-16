@@ -1,6 +1,6 @@
 
 
-class Json{
+public class Json{
 
 
 

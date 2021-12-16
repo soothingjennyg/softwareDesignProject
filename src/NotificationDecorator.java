@@ -1,6 +1,6 @@
 
 
-class NotificationDecorator implements Sendable{
+public class NotificationDecorator implements Sendable{
 
     private Sendable wrapper;
 

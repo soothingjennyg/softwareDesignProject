@@ -1,19 +1,16 @@
 
 
-class Review implements Matchable{
-    
-    private int rating;
-    private String comments;
-    private int reviewerId;
+public abstract class Review{
 
-    public Review(int rating, String comment){
+    protected String comments;
+    protected int reviewerId;
 
+    public Review(int reviewerId, String comment){
+        this.comments = comment;
+        this.reviewerId = reviewerId;
     }
 
-    public User getOwner(){
-
-	return null;
-	
+    public String getComments(){
+        return this.comments;
     }
-
 }

@@ -1,24 +1,37 @@
 
 
-class MatchedShift{
+public class MatchedShift{
 
     private int shiftId;
     private int employeeId;
     private int rank;
     private Boolean isApproved;
     private Boolean isCompleted;
-    private Shift shiftPosition;
+    private Employee employee;
+    private Shift shift;
 
 
 
-    public MatchedShift(Shift info){
+    public MatchedShift(Employee employee, Shift shift){
 
-	
+	this.employee = employee;
+	this.shift = shift;
+        
     }
 
     public Boolean appoveShift(){
 
-	return null;
+	this.isApproved = true;
+
+	return true;
+	
+    }
+
+    public Boolean rejectShift(){
+
+	this.isApproved = false;
+
+	return true;
 	
     }
 
@@ -64,9 +77,14 @@ class MatchedShift{
 	
     }
 
-    public Review createReview(int reviewerId, int rating, String comment){
+    public Review createReview(int reviewerId, String type, String comment, int rating){
 
-	return null;
+        if(type.equals("complaint")){
+            return new Complaint(reviewerId, comment);
+        }
+        else{
+            return new Feedback(reviewerId, comment, rating);
+        }
 	
     }
 

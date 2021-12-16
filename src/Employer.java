@@ -1,7 +1,7 @@
 
 
 
-class Employer{
+public class Employer{
 
     private int id;
     private User user;
@@ -9,9 +9,19 @@ class Employer{
 
 
 
-    public Report makeReport(String type){
+    public Report makeReport(String type, String title, Json data, String category, int year, int month){
 
-	return null;
+	if(type.equals("annual")){
+
+	    return AnnualReportGenerator.getInstance().generateReport(title, data, category, year, month);
+	    
+	}
+	else{
+
+	    return MonthlyReportGenerator.getInstance().generateReport(title, data, category, year, month);
+
+	}
+	
     }
 
 }

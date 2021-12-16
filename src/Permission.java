@@ -1,6 +1,6 @@
 
 
-class Permission{
+public class Permission{
 
     private int pid;
     private String key;

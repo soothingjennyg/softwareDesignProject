@@ -1,6 +1,6 @@
 
 
-class NotificationCreator{
+public class NotificationCreator{
 
     private NotificationCreator instance;
 

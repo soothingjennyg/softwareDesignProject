@@ -3,7 +3,8 @@ import java.util.Date;
 interface BuildShift{
 
     public Boolean reset();
-    public Boolean populateTimeSlot(Date from, Date to);
+    public Boolean constructShift();
+    public Boolean populateTimeSlot(Date start, Date end);
     public Shift duplicateShift(int shiftId);
     public Shift getResult();
 
