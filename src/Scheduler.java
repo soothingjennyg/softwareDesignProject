@@ -2,21 +2,12 @@
 
 public class Scheduler{
 
-    private static Scheduler instance;
     private Schedule[] schedules;
     private Matcher matcher;
 
 
     private Scheduler(){
 
-    }
-
-
-    public static Scheduler getInstance(){
-        if(instance==null){
-            instance = new Scheduler();
-        }
-        return instance;
     }
 
     public Boolean addSchedule(Schedule schedule){

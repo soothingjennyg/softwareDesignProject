@@ -2,17 +2,9 @@
 
 public class NotificationCreator{
 
-    private NotificationCreator instance;
-
 
     private NotificationCreator(){
 
-
-    }
-
-    static NotificationCreator getInstance(){
-
-	return null;
 
     }
 
