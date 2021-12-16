@@ -1,6 +1,6 @@
 import java.util.Date;
 
-class Configuration implements BelongToUser{
+public class Configuration implements BelongToUser{
 
     private String type;
     private Json data;

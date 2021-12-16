@@ -1,6 +1,6 @@
 import java.util.Date;
 
-class ShiftBuilder implements BuildShift{
+public class ShiftBuilder implements BuildShift{
 
     private Shift result;
 

@@ -1,6 +1,6 @@
 
 
-class MonthlyReport implements Report{
+public class MonthlyReport implements Report{
 
     private String title;
     private Json data;

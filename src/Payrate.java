@@ -1,6 +1,6 @@
 
 
-class Payrate{
+public class Payrate{
 
     private int rate;
     private String currency;

@@ -1,6 +1,6 @@
 import java.util.Date;
 
-class TimeSlot{
+public class TimeSlot{
 
     private Date from;
     private Date to;

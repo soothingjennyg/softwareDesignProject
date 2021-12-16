@@ -1,6 +1,6 @@
 
 
-class SmsNotificationDecorator extends NotificationDecorator{
+public class SmsNotificationDecorator extends NotificationDecorator{
 
     private Sendable wrapper;
 

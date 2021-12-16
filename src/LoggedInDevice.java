@@ -1,6 +1,6 @@
 import java.util.Date;
 
-class LoggedInDevice implements BelongToUser{
+public class LoggedInDevice implements BelongToUser{
 
     private String model;
     private String pushNotificationToken;
@@ -14,7 +14,7 @@ class LoggedInDevice implements BelongToUser{
     
     public User getOwner(){
 
-	return null;
+	    return null;
 	
     }
 

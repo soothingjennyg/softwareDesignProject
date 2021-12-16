@@ -1,6 +1,6 @@
 
 
-class Schedule{
+public class Schedule{
 
     private String job;
     private MatchStrategy strategy;

@@ -1,6 +1,6 @@
 import java.util.Date;
 
-class Budget{
+public class Budget{
 
     private FinanceMediator mediator;
     private int budgetSetLimit;

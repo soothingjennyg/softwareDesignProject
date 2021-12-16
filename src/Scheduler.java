@@ -1,8 +1,8 @@
 
 
-class Scheduler{
+public class Scheduler{
 
-    private Scheduler instance;
+    private static Scheduler instance;
     private Schedule[] schedules;
     private Matcher matcher;
 
@@ -12,10 +12,11 @@ class Scheduler{
     }
 
 
-    static Scheduler getInstance(){
-
-	return null;
-
+    public static Scheduler getInstance(){
+        if(instance==null){
+            instance = new Scheduler();
+        }
+        return instance;
     }
 
     public Boolean addSchedule(Schedule schedule){

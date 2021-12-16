@@ -1,6 +1,6 @@
 import java.util.Date;
 
-class BuildShiftDirector{
+public class BuildShiftDirector{
 
     private BuildShift builder;
 

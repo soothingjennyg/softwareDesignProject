@@ -1,6 +1,6 @@
 
 
-class Skill{
+public class Skill{
 
     private String name;
     private int level;

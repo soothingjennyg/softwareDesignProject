@@ -1,6 +1,6 @@
 
 
-class Company{
+public class Company{
 
     private String companyName;
     private Employer[] employers;

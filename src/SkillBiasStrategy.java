@@ -1,7 +1,7 @@
 import java.util.Date;
 import java.util.ArrayList;
 
-class SkillBiasStrategy implements MatchStrategy{
+public class SkillBiasStrategy implements MatchStrategy{
     
     private Json config;
 

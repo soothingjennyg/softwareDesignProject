@@ -1,6 +1,6 @@
 import java.util.Date;
 
-class Break{
+public class Break{
 
     private Date from;
     private Date to;

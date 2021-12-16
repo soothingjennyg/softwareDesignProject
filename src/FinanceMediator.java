@@ -1,6 +1,6 @@
 
 
-class FinanceMediator implements Mediator{
+public class FinanceMediator implements Mediator{
 
     private Payroll[] payroll;
     private Budget[] budgets;

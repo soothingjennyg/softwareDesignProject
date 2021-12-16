@@ -1,12 +1,7 @@
 import java.util.Date;
 import java.util.ArrayList;
 
-abstract class Matchable{
-
-    private Address address;
-    private Payrate payrate;
-    private Skill[] skills;
-    private ArrayList<TimeSlot> timeSlots;
+public abstract class Matchable{
     
 
     public abstract Skill addSkill(String name, int level);

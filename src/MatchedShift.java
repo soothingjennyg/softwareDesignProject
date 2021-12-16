@@ -1,6 +1,6 @@
 
 
-class MatchedShift{
+public class MatchedShift{
 
     private int shiftId;
     private int employeeId;

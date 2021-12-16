@@ -1,6 +1,6 @@
 import java.util.Date;
 
-class Comment{
+public class Comment{
 
     private String text;
     private Date date;

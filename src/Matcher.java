@@ -1,6 +1,6 @@
 
 
-class Matcher{
+public class Matcher{
 
     private MatchStrategy strategy;
 

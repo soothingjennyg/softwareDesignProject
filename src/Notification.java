@@ -1,6 +1,6 @@
 
 
-class Notification implements Sendable{
+public class Notification implements Sendable{
 
     private String title;
     private String body;

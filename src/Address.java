@@ -1,6 +1,6 @@
 
 
-class Address{
+public class Address{
 
     private String no;
     private String street;

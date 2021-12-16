@@ -1,6 +1,6 @@
 
 
-class Payroll{
+public class Payroll{
 
     private FinanceMediator mediator;
     private Boolean approved;

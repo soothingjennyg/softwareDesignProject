@@ -2,7 +2,7 @@ import java.io.File;
 import java.util.Date;
 import java.util.ArrayList;
 
-class Shift extends Matchable{
+public class Shift extends Matchable{
 
     private String title;
     private Comment[] comments;

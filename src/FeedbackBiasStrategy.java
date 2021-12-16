@@ -1,7 +1,7 @@
 import java.util.Date;
 import java.util.ArrayList;
 
-class FeedbackBiasStrategy implements MatchStrategy{
+public class FeedbackBiasStrategy implements MatchStrategy{
     
     private Json config;
 

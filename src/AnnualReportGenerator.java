@@ -1,6 +1,6 @@
 
 
-class AnnualReportGenerator extends ReportGenerator{
+public class AnnualReportGenerator extends ReportGenerator<AnnualReport>{
 
     private String year;
     private String title;
@@ -8,6 +8,15 @@ class AnnualReportGenerator extends ReportGenerator{
     private String category;
     private AnnualReport report;
     public Boolean isGenerating;
+
+    private static AnnualReportGenerator instance;
+
+    public static AnnualReportGenerator getInstance(){
+        if(instance==null){
+            instance = new AnnualReportGenerator();
+        }
+        return instance;
+    }
 
     public AnnualReport generateReport(String title, Json data, String category, int year, int month){
 
@@ -18,7 +27,6 @@ class AnnualReportGenerator extends ReportGenerator{
 	    this.queueReport();
 
 	    this.report = new AnnualReport(title, data, category, year);
-	    this.isGenerating = false;
 	}
 	
 	return this.report;
@@ -27,14 +35,20 @@ class AnnualReportGenerator extends ReportGenerator{
 
     public Boolean checkIfExists(){
 
-        return this.report != null;
+        /*
+        Check in DB
+        if(exists in DB){
+            return true;
+        }
+        else{
+            return false;
+        }
+         */
+        return false;
 
     }
 
     public Boolean queueReport(){
-
-	while(this.isGenerating);
-	this.isGenerating = true;
 
 	return true;
 	

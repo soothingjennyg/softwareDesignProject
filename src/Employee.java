@@ -1,7 +1,7 @@
 import java.util.Date;
 import java.util.ArrayList;
 
-class Employee extends Matchable{
+public class Employee extends Matchable{
 
     private int id;
     private User user;
