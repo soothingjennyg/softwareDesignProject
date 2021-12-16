@@ -80,14 +80,17 @@ public class FeedbackBiasStrategy implements MatchStrategy{
     private float getMeanRating(Review[] reviews){
 
         int totalRating = 0;
+        int numberOfFeedbacks = 0;
 
 	for(int i = 0; i < reviews.length; i++){
 
-	    totalRating += reviews[i].getRating();
-
+		if(reviews[i] instanceof Feedback) {
+			totalRating += ((Feedback) reviews[i]).getRating();
+			numberOfFeedbacks++;
+		}
 	}
 
-	return (float)totalRating / reviews.length;
+	return (float)totalRating / numberOfFeedbacks;
 
     }
 

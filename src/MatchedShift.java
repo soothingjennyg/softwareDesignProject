@@ -77,9 +77,14 @@ public class MatchedShift{
 	
     }
 
-    public Review createReview(int reviewerId, int rating, String comment){
+    public Review createReview(int reviewerId, String type, String comment, int rating){
 
-        return new Review(reviewerId, rating, comment);
+        if(type.equals("complaint")){
+            return new Complaint(reviewerId, comment);
+        }
+        else{
+            return new Feedback(reviewerId, comment, rating);
+        }
 	
     }
 

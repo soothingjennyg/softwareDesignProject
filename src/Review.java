@@ -1,28 +1,16 @@
 
 
-public class Review{
-    
-    private int rating;
-    private String comment;
-    private int reviewerId;
+public abstract class Review{
 
-    public Review(int reviewerId, int rating, String comment){
+    protected String comments;
+    protected int reviewerId;
 
-	this.reviewerId = reviewerId;
-	this.rating = rating;
-	this.comment = comment;
+    public Review(int reviewerId, String comment){
+        this.comments = comment;
+        this.reviewerId = reviewerId;
     }
 
     public String getComments(){
-
-	return this.comment;
-	
+        return this.comments;
     }
-
-    public int getRating(){
-
-	return this.rating;
-	
-    }
-
 }
