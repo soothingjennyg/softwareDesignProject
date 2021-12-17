@@ -1,8 +1,0 @@
-
-
-interface MatchStrategy{
-
-    //private Json config;
-
-    public MatchedShift match();
-}
