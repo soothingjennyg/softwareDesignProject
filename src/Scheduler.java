@@ -1,6 +1,6 @@
 
 
-public class Scheduler{
+public class Scheduler extends Singleton {
 
     private Schedule[] schedules;
     private Matcher matcher;
@@ -12,22 +12,22 @@ public class Scheduler{
 
     public Boolean addSchedule(Schedule schedule){
 
-	return null;
+	    return null;
 
     }
 
     public Boolean executeSchedule(Schedule schedule){
 
-	if(schedule.getJob().equals("match")){
+        if(schedule.getJob().equals("match")){
 
-	    this.matcher.setStrategy(schedule.getStrategy());
+            this.matcher.setStrategy(schedule.getStrategy());
 
-	    this.matcher.match(schedule.getEmployee(), schedule.getShift());
+            this.matcher.match(schedule.getEmployee(), schedule.getShift());
 
-	    return true;
+            return true;
 
-	}
-	return false;
+        }
+        return false;
 	
     }
 

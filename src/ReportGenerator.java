@@ -1,10 +1,11 @@
+import java.util.List;
 
+abstract class ReportGenerator<G, T> extends Singleton {
 
-abstract class ReportGenerator<T extends Report> {
+    public List<Integer> queue;
 
-    public Boolean isGenerating;
-
-    public abstract T generateReport(String title, Json data, String category, int year, int month);
-    public abstract Boolean checkIfExists();
-    public abstract Boolean queueReport();
+    public abstract Boolean generateReport(Json period);
+    public abstract Boolean checkIfExists(Json period);
+    public abstract Boolean queueReport(Json period);
+    public abstract T getReport(Json period);
 }

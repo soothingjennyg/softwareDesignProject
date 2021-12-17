@@ -88,4 +88,11 @@ public class MatchedShift{
 	
     }
 
+    public Boolean resolveComplaint(Review review) {
+        if (review instanceof Complaint) {
+            ((Complaint) review).resolve();
+        }
+        return true;
+    }
+
 }

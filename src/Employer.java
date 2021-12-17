@@ -9,18 +9,17 @@ public class Employer{
 
 
 
-    public Report makeReport(String type, String title, Json data, String category, int year, int month){
+    public boolean makeReport(String type, Json period){
 
-	if(type.equals("annual")){
+			if(type.equals("annual")){
+					
+				return AnnualReportGenerator.<AnnualReportGenerator>getInstance().generateReport(period);
+					
+			} else{
 
-	    return AnnualReportGenerator.getInstance().generateReport(title, data, category, year, month);
-	    
-	}
-	else{
+				return MonthlyReportGenerator.<MonthlyReportGenerator>getInstance().generateReport(period);
 
-	    return MonthlyReportGenerator.getInstance().generateReport(title, data, category, year, month);
-
-	}
+			}
 	
     }
 

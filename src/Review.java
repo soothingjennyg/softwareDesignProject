@@ -2,7 +2,7 @@
 
 public abstract class Review{
 
-    protected String comments;
+    private String comments;
     protected int reviewerId;
 
     public Review(int reviewerId, String comment){

@@ -1,41 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
 
+public class MonthlyReportGenerator extends ReportGenerator<MonthlyReportGenerator, MonthlyReport> {
 
+    public List<Json> queue = new ArrayList<Json>();
 
-public class MonthlyReportGenerator extends ReportGenerator<MonthlyReport> {
+    public Boolean generateReport(Json period){
 
-    private int month;
-    private int year;
-    private String title;
-    private Json data;
-    private String category;
-    private MonthlyReport report;
-    public Boolean isGenerating;
+        Boolean exists = this.checkIfExists(period);
 
-    private static MonthlyReportGenerator instance;
+        if(!exists){
 
-    public static MonthlyReportGenerator getInstance(){
-        if(instance==null){
-            instance = new MonthlyReportGenerator();
+            this.queueReport(period);
+
         }
-        return instance;
-    }
-
-    public MonthlyReport generateReport(String title, Json data, String category, int year, int month){
-
-      Boolean exists = this.checkIfExists();
-
-	if(!exists){
-
-	    this.queueReport();
-	    this.report = new MonthlyReport(title, data, category, year, month);
-
-	}
-	
-	return this.report;
+        
+        return true;
 
     }
 
-    public Boolean checkIfExists(){
+    public Boolean checkIfExists(Json period){
 
         /*
         Check in DB
@@ -50,10 +34,44 @@ public class MonthlyReportGenerator extends ReportGenerator<MonthlyReport> {
 
     }
 
-    public Boolean queueReport(){
+    public Boolean queueReport(Json period){
+        this.queue.add(period);
+        this.checkExecuteQueue();
 
-	return true;
+	    return true;
 	
+    }
+
+    public Boolean checkExecuteQueue(){
+
+        if (this.queue.size() > 0){
+            int year = (int) this.queue.remove(0).get("year");
+            int month = (int) this.queue.remove(0).get("month");
+
+            // looking at DB and gather data and save report to DB
+
+            this.checkExecuteQueue();
+        }
+
+        return true;
+
+    }
+
+    public MonthlyReport getReport(Json period){
+        int year = (int) period.get("year");
+        int month = (int) period.get("month");
+        Boolean exists = this.checkIfExists(period);
+
+        if(!exists){
+
+            return null;
+
+        }
+
+        Json data = null;
+        
+        return new MonthlyReport("Monthly Report for " + year + ", " + month, data, "Period Report", year, month);
+
     }
 
 }

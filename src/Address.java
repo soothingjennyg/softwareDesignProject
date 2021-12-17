@@ -11,7 +11,7 @@ public class Address{
 
     public String getAsString(){
 
-	return null;
+	return this.no + ',' + this.street + ',' + this.city + ',' + this.zip + ',' + this.country;
     }
 
 }

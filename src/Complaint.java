@@ -8,7 +8,7 @@ public class Complaint extends Review{
     }
 
     public Boolean resolve(){
-        return false;
+        return true;
     }
 
 }
