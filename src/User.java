@@ -17,38 +17,44 @@ public class User{
 
     public String login(String email, String pwd){
 
-	if(this.email.equals(email) && this.pwd.equals(pwd)){
+        if(this.email.equals(email) && this.pwd.equals(pwd)){
 
-	    SecureRandom random = new SecureRandom();
-	    byte bytes[] = new byte[20];
-	    random.nextBytes(bytes);
-	    return bytes.toString();
+            SecureRandom random = new SecureRandom();
+            byte bytes[] = new byte[20];
+            random.nextBytes(bytes);
+            return bytes.toString();
 
 
-	}
+        }
 
-	return null;
+        return null;
     }
 
-    public User uploadInformation(String info){
-
-	return null;
+    public User updateInformation(String info){
+	    return null;
     }
 
     public LoggedInDevice[] getLoggedInDevices(){
 
-	return null;
+	    return null;
 
     }
 
     public Configuration[] getConfigurations(){
 
-	return null;
+	    return null;
+
     }
 
-    public Review[] getReviews(){
+    public Permission[] getPermissions(){
 
-	return null;
+	    return null;
+        
     }
 
+    public ActivityLog[] getActivityLogs(){
+
+	    return null;
+        
+    }
 }
