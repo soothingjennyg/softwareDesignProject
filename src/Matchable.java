@@ -14,5 +14,4 @@ public abstract class Matchable{
     public abstract Address addAddress();
     public abstract Address getAddress();
 
-
 }

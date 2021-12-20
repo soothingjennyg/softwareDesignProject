@@ -1,17 +1,18 @@
-import java.util.function.Supplier;
+// Since java does not have template feature, we use some hacks to just make it compile.
+public class Singleton {
+    private static Singleton instance;
 
-public class Singleton<T> {
-    private T instance;
+    private static Singleton createInstance(){
 
-    private T createInstance(Supplier<T> supplier){
+        return new Singleton();
 
-            return supplier.get();
     }
 
-    public T getInstance(Supplier<T> supplier){
-        if(this.instance == null){
-            this.instance = createInstance(supplier);
+    @SuppressWarnings("unchecked")
+    public static <T> T getInstance(){
+        if(instance == null){
+            instance = createInstance();
         }
-        return this.instance;
+        return (T) instance;
     }
 }

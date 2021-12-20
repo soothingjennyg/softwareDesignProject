@@ -2,6 +2,6 @@
 
 interface Report{
 
-    public Report createReport();
+    public Boolean deleteReport();
 
 }
