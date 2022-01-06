@@ -1,6 +1,6 @@
 import java.util.List;
 
-abstract class ReportGenerator<G, T> extends Singleton {
+abstract class ReportGenerator<T> extends Singleton {
 
     public List<Integer> queue;
 

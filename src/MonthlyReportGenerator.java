@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class MonthlyReportGenerator extends ReportGenerator<MonthlyReportGenerator, MonthlyReport> {
+public class MonthlyReportGenerator extends ReportGenerator<MonthlyReport> {
 
     public List<Json> queue = new ArrayList<Json>();
 

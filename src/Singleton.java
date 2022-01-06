@@ -1,18 +1,20 @@
-// Since java does not have template feature, we use some hacks to just make it compile.
+import java.lang.reflect.InvocationTargetException;
+
 public class Singleton {
+
     private static Singleton instance;
 
-    private static Singleton createInstance(){
-
-        return new Singleton();
-
-    }
-
     @SuppressWarnings("unchecked")
-    public static <T> T getInstance(){
-        if(instance == null){
-            instance = createInstance();
+    public static <T extends Singleton> T getInstance(Class<T> instanceClass) {
+
+        if (instance == null) {
+            try {
+                instance = instanceClass.getDeclaredConstructor().newInstance();
+            } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException | InstantiationException e) {
+
+            }
         }
         return (T) instance;
     }
+
 }
